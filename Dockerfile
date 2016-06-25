@@ -11,9 +11,12 @@ RUN apt-get -qq -y update && \
 RUN easy_install supervisor && \
     easy_install supervisor-stdout
 
+COPY "supervisord.conf" "/usr/share/icecast2/supervisord.conf"
+COPY "icecast.xml" "/usr/share/icecast2/icecast.xml"
+
 CMD ["/start.sh"]
 EXPOSE 8000
-VOLUME ["/config", "/var/log/icecast2", "/etc/icecast2"]
+VOLUME ["/var/log/icecast2", "/usr/share/icecast2"]
 
 ADD ./start.sh /start.sh
 ADD ./etc /etc

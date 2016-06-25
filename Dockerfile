@@ -19,5 +19,4 @@ EXPOSE 8000
 VOLUME ["/var/log/icecast2", "/usr/share/icecast2"]
 
 ADD ./start.sh /start.sh
-ADD ./etc /etc
 RUN chown -R icecast2 /etc/icecast2

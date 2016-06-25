@@ -85,7 +85,7 @@
     -->
 
     <mount>
-      <mount-name>/silence</mount-name>
+      <mount-name>/mopidy</mount-name>
       <fallback-mount>/silence.mp3</fallback-mount>
       <fallback-override>1</fallback-override>
     </mount>

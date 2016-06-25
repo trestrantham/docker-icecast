@@ -13,6 +13,7 @@ RUN easy_install supervisor && \
 
 COPY "supervisord.conf" "/usr/share/icecast2/supervisord.conf"
 COPY "icecast.xml" "/usr/share/icecast2/icecast.xml"
+COPY "silence.mp3" "/usr/share/icecast2/web/silence.mp3"
 
 CMD ["/start.sh"]
 EXPOSE 8000
